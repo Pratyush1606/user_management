@@ -12,15 +12,6 @@ from rest_framework_simplejwt.tokens import RefreshToken, SlidingToken, UntypedT
 
 # Create your views here.
 
-class HelloView(APIView):
-    #permission_classes = (IsAuthenticated,)
-
-    def get(self, request):
-        serializers = User.objects.filter(is_teacher=True)
-
-        return Response(data=TeacherSerializer(serializers,many=True).data)
-
-
 class teacherSignUp(APIView):
     def post(self, request):
         serializer = StudentSerializer(data=request.data)
