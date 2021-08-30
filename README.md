@@ -126,7 +126,6 @@ Sample Response:
 
 * Request needs JWT Authentication
 
-
     If access token is valid:
 
     ```js
